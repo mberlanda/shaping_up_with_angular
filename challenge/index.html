@@ -51,7 +51,7 @@
               <blockquote>
                 <strong>{{review.stars}} Stars</strong>
                 {{review.body}}
-                <cite class="clearfix">{{review.author}}</cite>
+                <cite class="clearfix">-{{review.author}}</cite>
               </blockquote>
             </li>
           </ul>
@@ -59,8 +59,9 @@
           <form name="reviewForm">
             <!--  Live Preview -->
             <blockquote>
-              <strong> Stars</strong>
-              <cite class="clearfix">-</cite>
+              <strong>{{review.stars}} Stars</strong>
+              {{review.body}}
+              <cite class="clearfix">-{{review.author}}</cite>
             </blockquote>
 
             <!--  Review Form -->
@@ -71,7 +72,7 @@
               </select>
             </fieldset>
             <fieldset class="form-group">
-              <textarea class="form-control" placeholder="Write a short review of the product..." ng-model="review.doy" title="Review"></textarea>
+              <textarea class="form-control" placeholder="Write a short review of the product..." ng-model="review.body" title="Review"></textarea>
             </fieldset>
             <fieldset class="form-group">
               <input type="email" class="form-control" placeholder="jimmyDean@example.org" ng-model="review.author" title="Email" />

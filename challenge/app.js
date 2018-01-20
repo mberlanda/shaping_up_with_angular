@@ -26,6 +26,7 @@
   app.controller('ReviewController',function(){
     this.review = {};
     this.addReview = function(product){
+      this.review.createdOn = Date.now();
       if (product !== undefined){
         product.reviews.push(this.review);
       }

@@ -12,7 +12,7 @@
       this.tab = t;
     };
     this.isSet = function(t){
-      return this.tab == t;
+      return this.tab === t;
     };
   });
 

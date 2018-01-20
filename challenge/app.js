@@ -6,6 +6,16 @@
     this.products = gems;
   });
 
+  app.controller('TabController', function(){
+    this.tab = 1;
+    this.setTab = function(t){
+      this.tab = t;
+    };
+    this.isSet = function(t){
+      return this.tab == t;
+    };
+  });
+
   var gems = [{
       name: 'Azurite',
       description: "Some gems have hidden qualities beyond their luster, beyond their shine... Azurite is one of those gems.",

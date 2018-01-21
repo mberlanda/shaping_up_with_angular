@@ -2,10 +2,17 @@
 
   var app = angular.module('gemStore', []);
 
-  app.controller('GalleryController', function(){
-    this.current = 0;
-    this.setCurrent = function(c){
-      this.current = c || 0;
+  app.directive('productGallery', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'templates/product-gallery.html',
+      controller: function() {
+        this.current = 0;
+        this.setCurrent = function(c){
+          this.current = c || 0;
+        };
+      },
+      controllerAs: 'gallery'
     };
   });
 

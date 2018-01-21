@@ -13,15 +13,23 @@
     this.products = gems;
   });
 
-  app.controller('TabController', function(){
-    this.tab = 1;
-    this.setTab = function(t){
-      this.tab = t;
-    };
-    this.isSet = function(t){
-      return this.tab === t;
+  app.directive('productTabs', function(){
+    return {
+      restrict: 'E',
+      templateUrl: 'templates/product-tabs.html',
+      controller: function(){
+        this.tab = 1;
+        this.setTab = function(t){
+          this.tab = t;
+        };
+        this.isSet = function(t){
+          return this.tab === t;
+        };
+      },
+      controllerAs: 'tab'
     };
   });
+
 
   app.controller('ReviewController',function(){
     this.review = {};
